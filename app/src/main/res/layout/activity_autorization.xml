@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.AuthorizationActivity">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:paddingStart="40dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/register_label"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <TextView
+        android:id="@+id/register_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:paddingStart="40dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_label"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <View
+        android:id="@+id/login_line"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/register_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_label"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <View
+        android:id="@+id/register_line"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/login_label"
+        app:layout_constraintTop_toBottomOf="@+id/register_label"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/login_and_registerFragmentsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

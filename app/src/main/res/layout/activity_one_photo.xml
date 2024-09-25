@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.OnePhotoActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ediTextMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/onePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                tools:src="@drawable/smile" />
+
+            <TextView
+                android:id="@+id/dateOfPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="28.01.2024 12:00" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentsRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/comment_card" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <EditText
+        android:id="@+id/ediTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Введите текст"
+        android:inputType="textMultiLine"
+        android:padding="18dp"
+        android:paddingEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Long Long Long Long Long LongLong Long LongLong Long LongLong Long LongLong Long LongLong Long LongLong Long LongLong Long Long" />
+
+    <ImageView
+        android:id="@+id/sendImageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:paddingEnd="5dp"
+        android:src="@drawable/baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@+id/ediTextMessage"
+        app:layout_constraintEnd_toEndOf="@+id/ediTextMessage"
+        app:layout_constraintTop_toTopOf="@+id/ediTextMessage"
+        app:tint="@android:color/holo_green_light" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
