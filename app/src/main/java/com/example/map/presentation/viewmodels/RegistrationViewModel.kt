@@ -1,11 +1,8 @@
 package com.example.map.presentation.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.map.data.network.MapRepositoryImpl
 import com.example.map.domain.RegisterUserUseCase
 import com.example.map.domain.User
 import com.example.map.presentation.AuthorizationState

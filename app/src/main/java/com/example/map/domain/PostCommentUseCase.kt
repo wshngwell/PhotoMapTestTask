@@ -1,6 +1,5 @@
 package com.example.map.domain
 
-import com.example.map.data.network.MapRepositoryImpl
 import javax.inject.Inject
 
 data class PostCommentUseCase @Inject constructor(private val repository: MapRepository) {

@@ -1,7 +1,7 @@
 package com.example.map.di
 
 import androidx.lifecycle.ViewModel
-import com.example.map.data.network.MapRepositoryImpl
+import com.example.map.data.MapRepositoryImpl
 import com.example.map.domain.MapRepository
 import com.example.map.presentation.viewmodels.DetailPhotoInfoViewModel
 import com.example.map.presentation.viewmodels.LoginViewModel

@@ -1,10 +1,9 @@
-package com.example.map.data.network
+package com.example.map.data
 
 import android.app.Application
 import android.util.Log
-import com.example.map.data.Mapper
 import com.example.map.data.database.PhotosDao
-import com.example.map.data.database.PhotosDataBase
+import com.example.map.data.network.ApiService
 import com.example.map.domain.Comment
 import com.example.map.domain.MapRepository
 import com.example.map.domain.Photo
