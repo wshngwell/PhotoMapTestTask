@@ -104,7 +104,7 @@ class PhotosViewModel @Inject constructor(
     @RequiresApi(Build.VERSION_CODES.O)
     private fun encodeImageToBase64(bitmap: Bitmap): String {
         val byteArrayOutputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream)
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 90, byteArrayOutputStream)
         val byteArray = byteArrayOutputStream.toByteArray()
         return Base64.getEncoder().encodeToString(byteArray)
     }
